@@ -67,4 +67,30 @@ The solution uses Google BigQuery as a scalable cloud data warehouse to process 
 | **Storage Audit** | `M_Invalid_Storage_Fees_USD` | $\sum (\text{Demurrage} + \text{Detention}) \quad \text{assessed within Free Time limits}$ | $\$0$ invalid penalties |
 | **Utilization** | `M_Avg_Capacity_Utilization_Pct` | $\text{AVERAGE}\left(\frac{\text{WMS Weight}}{\text{Max Payload Capacity}}\right) \times 100$ | $\ge 85\%$ payload rate |
 
+### 🔍 3. ANALYZE Phase
+The system partitions analytics into five specialized business dashboards formatted for standard 4:3 canvas layouts.
 
+1. Invoice Integrity & SLA Claim Audit
+- Business Purpose: Detect duplicate invoice submissions and identify carrier-caused delivery SLA violations for claim generation.
+- Key Visuals: KPI Cards (Duplicate Count, Duplicate USD, Claimable SLA Amount), Column Chart of Billing by Audit Flag, SLA Delay Root Cause Donut Chart, Detailed BOL Dispute Table.
+- Dashboard Preview:
+
+2. Weight Discrepancy & Billing Audit
+- Business Purpose: Benchmark carrier billed weight against WMS scale measurements to uncover over-billing.
+- Key Visuals: Weight Comparison KPIs (Billed vs. WMS), Top Over-billing Carriers Bar Chart, Discrepancy % by Container Type Scatter Plot, Line-item Weight Audit Table.
+- Dashboard Preview:
+
+3. Demurrage & Detention Charge Audit
+- Business Purpose: Audit carrier demurrage and detention assessments against contractual free-time allowances.
+- Key Visuals: Storage Penalty KPIs, Actual Port Stay vs. Contractual Free Days Clustered Column Chart, Invalid Penalty Status Distribution, Storage Fee Detail Grid.
+- Dashboard Preview:
+
+4. Container Weight Utilization Efficiency
+- Business Purpose: Identify underutilized container capacity ($<60\%$ payload) to reduce total shipment volume requirements.
+- Key Visuals: Average Load Factor Gauge Chart, Utilization Breakdown by Container Type (20DC vs 40HC), Underutilized Shipment Ratio Cards, Container Payload Detail Table.
+- Dashboard Preview:
+
+5. Carrier & Route Detention Performance
+- Business Purpose: Measure container turnaround times and total detention costs across carriers and shipping corridors (Trade Lanes).
+- Key Visuals: Trade Lane Heatmap Matrix (POL_Origin $\times$ POD_Destination), Average Detention Days by Carrier, Total Shipment Volume Cards, Route Level Performance Breakdown.
+- Dashboard Preview:
