@@ -62,8 +62,8 @@ The solution uses Google BigQuery as a scalable cloud data warehouse to process 
 | :--- | :--- | :--- | :--- |
 | **Integrity** | `M_Total_Duplicate_Amount_USD` | $\sum \text{Billed Total USD} \quad \text{where } \text{Is Duplicate Invoice} = \text{TRUE}$ | $\$0$ (Zero duplicates paid) |
 | **Integrity** | `M_Claimable_SLA_Amount_USD` | $\sum \text{Billed Total USD} \quad \text{where } \text{Root Cause} = \text{'CARRIER ERROR'} \text{ and } \text{SLA Delay Days} > 0$ | 100% Claim recovery |
-| **Weight Audit** | `M_Overbilled_Weight_KG` | $\sum (\text{Billed Weight KG} - \text{WMS\_Measured\_Weight\_KG})$ | $0 \text{ KG}$ discrepancy |
-| **Weight Audit** | `M_Overbilled_Weight_Pct` | $\frac{\text{M\_Overbilled\_Weight\_KG}}{\text{M\_Total\_WMS\_Weight\_KG}} \times 100$ | $< 1\%$ tolerance |
+| **Weight Audit** | `M_Overbilled_Weight_KG` | $\sum (\text{Billed Weight KG} - \text{WMS Measured Weight KG})$ | $0 \text{ KG}$ discrepancy |
+| **Weight Audit** | `M_Overbilled_Weight_Pct` | $\frac{\text{M Overbilled Weight KG}}{\text{M Total WMS Weight KG}} \times 100$ | $< 1\%$ tolerance |
 | **Storage Audit** | `M_Invalid_Storage_Fees_USD` | $\sum (\text{Demurrage} + \text{Detention}) \quad \text{assessed within Free Time limits}$ | $\$0$ invalid penalties |
 | **Utilization** | `M_Avg_Capacity_Utilization_Pct` | $\text{AVERAGE}\left(\frac{\text{WMS Weight}}{\text{Max Payload Capacity}}\right) \times 100$ | $\ge 85\%$ payload rate |
 
