@@ -191,7 +191,7 @@ Freight_Audit_Project/
 ### Installation & Deployment Steps
 **1. Clone the Repository:**
 ```bash
-git clone https://github.com/your-username/Freight_Audit_Project.git
+git clone https://github.com/tritaptheduc/Freight_Audit_Project.git
 cd Freight_Audit_Project
 ```
 
