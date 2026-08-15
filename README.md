@@ -66,3 +66,5 @@ The solution uses Google BigQuery as a scalable cloud data warehouse to process 
 | **Weight Audit** | `M_Overbilled_Weight_Pct` | $\frac{\text{M\_Overbilled\_Weight\_KG}}{\text{M\_Total\_WMS\_Weight\_KG}} \times 100$ | $< 1\%$ tolerance |
 | **Storage Audit** | `M_Invalid_Storage_Fees_USD` | $\sum (\text{Demurrage} + \text{Detention}) \quad \text{assessed within Free Time limits}$ | $\$0$ invalid penalties |
 | **Utilization** | `M_Avg_Capacity_Utilization_Pct` | $\text{AVERAGE}\left(\frac{\text{WMS Weight}}{\text{Max Payload Capacity}}\right) \times 100$ | $\ge 85\%$ payload rate |
+
+
