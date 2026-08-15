@@ -12,3 +12,20 @@ This repository presents an enterprise-grade **Automated Freight Audit & Analyti
         Problem &        Data Pipeline   Audit Marts &   Power BI Dash   Automated
         Objectives       Architecture     Root Cause      Visualizations  Data Rules
 ```
+### 🎯 1. DEFINE Phase
+**Problem Statement**
+
+The logistics organization faces financial loss due to unverified carrier invoices. Manual sampling fails to catch duplicate invoices, discrepancies between Warehouse Management System (WMS) weight logs and carrier-billed weights, and improper demurrage/detention penalty assessments during contractual free time.
+
+**Business Objectives**
+
+- Automate 100% Invoice Audit: Eliminate manual sample checks by transforming raw logistics streams into auto-audited data marts.
+- Recover Overcharged Capital: Identify invalid billings (duplicate charges, carrier-induced SLA delays, improper storage fees) to submit financial claims.
+
+- Optimize Payload Capacity: Track container load factors to reduce underutilization.
+
+**Target Stakeholders**
+
+- Logistics & Supply Chain Directors: High-level cost transparency, vendor compliance ratings, and total claimable financial recovery.
+
+- Freight Audit & Billing Specialists: Operational granularity down to individual Bill of Lading (BOL) level for invoice dispute processing.
