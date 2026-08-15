@@ -24,3 +24,36 @@ The logistics organization faces financial loss due to unverified carrier invoic
 **Target Stakeholders** <br>
 - Logistics & Supply Chain Directors: High-level cost transparency, vendor compliance ratings, and total claimable financial recovery.
 - Freight Audit & Billing Specialists: Operational granularity down to individual Bill of Lading (BOL) level for invoice dispute processing.
+
+### 📏 2. MEASURE Phase
+Data Pipeline Architecture
+The solution uses Google BigQuery as a scalable cloud data warehouse to process raw operational logs and contract matrices into structured audit layers.
+
+```plaintext
+[Raw Data Ingestion]
+  ├── raw_carrier_invoices (Carrier billing streams)
+  ├── fact_shipments_bol   (WMS & logistics execution logs)
+  ├── dim_contract_rates   (Agreed contract rates & Free Time terms)
+  └── dim_exchange_rates   (Currency conversion benchmarks)
+         │
+         ▼
+[BigQuery Staging Layer] -> v_stg_invoices
+  └── FX Normalization (to USD) & Multi-attribute Deduplication
+         │
+         ▼
+[BigQuery Core Audit Layer] -> v_base_freight_audit
+  └── Relational JOINs across Invoices, BOL execution, and Contracts
+         │
+         ▼
+[BigQuery Data Marts Layer] -> 5 Domain-Specific Views
+  ├── v_mart_sla_violation_audit
+  ├── v_mart_weight_discrepancy
+  ├── v_mart_demurrage_detention
+  ├── v_mart_underutilization
+  └── v_mart_booking_no_show_detention
+         │
+         ▼
+[Power BI Analytical Presentation Layer]
+  └── Star-schema Data Model with custom DAX measures & 4:3 ratio canvases
+```
+Core Metrics & Key Performance Indicators (KPIs)
