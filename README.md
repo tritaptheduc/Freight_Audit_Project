@@ -137,3 +137,76 @@ To ensure long-term data integrity and prevent regression, control mechanisms ar
 **Power BI Data Model Controls**
 - **Star Schema Design**: All 5 data marts connect to a centralized, calculated calendar table (dim_date_table), enforcing date aggregation consistency across all visuals.
 - **Isolated DAX Measures Layer**: DAX measures are defined against model views rather than raw tables, enabling dynamic filtering based on user role and date context.
+
+## 🛠️ Repository Structure & Quick Start
+### Repository Layout
+```plaintext
+Freight_Audit_Project/
+├── assets/
+│   ├── images/                          
+│   │   ├── Carrier & Route Detention Performance.png
+│   │   ├── Container Weight Utilization Efficiency.png
+│   │   ├── Demurrage & Detention Charge Audit.png
+│   │   ├── Invoice Integrity & SLA Claim Audit.png
+│   │   └── Weight Discrepancy & Billing Audit.png
+│   └── architecture_diagram.png        
+├── data/
+│   ├── raw/                         
+│   │   ├── dim_contract_rates.csv
+│   │   ├── dim_exchange_rates.csv
+│   │   ├── fact_shipments_bol.csv
+│   │   └── raw_carrier_invoices.csv
+│   └── data-dictionary/
+│       └── data-dictionary.xlsx
+├── docs/
+│   ├── Executive_Summary.md            
+│   └── Business_Requirements.md   
+├── reports/
+│   ├── Freight_Audit_Dashboard.pbix
+│   └── Freight_Audit_Template.pbit 
+├── src/
+│   ├── dax/
+│   │   ├── dim_date_table.dax
+│   │   └── measures.dax
+│   ├── json/
+│   │   └── Logistics_Freight_Audit_Theme.json
+│   ├── python/
+│   │   └── generate_mock_data.py
+│   └── sql/
+│       ├── 01_stg/
+│       │   └── v_stg_invoices.sql
+│       ├── 02_core/
+│       │   └── v_base_freight_audit.sql
+│       └── 03_marts/
+│           ├── v_mart_booking_no_show_detention.sql
+│           ├── v_mart_demurrage_detention.sql
+│           ├── v_mart_sla_violation_audit.sql
+│           ├── v_mart_underutilization.sql
+│           └── v_mart_weight_discrepancy.sql
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+### Installation & Deployment Steps
+1. Clone the Repository:
+```bash
+git clone https://github.com/your-username/Freight_Audit_Project.git
+cd Freight_Audit_Project
+```
+
+2. Load Raw Data to Google BigQuery:
+- Create dataset freight_audit_db_2 inside project freight-audit-project.
+- Upload the 4 CSV files from the data/ directory into BigQuery.
+
+3. Execute SQL Transformations:
+Run the SQL scripts in src/sql/ in the following sequence:
+- v_stg_invoices.sql
+- v_base_freight_audit.sql
+- v_mart_*.sql (all analytical data marts)
+
+4. Launch Power BI Dashboard:
+- Open reports/Freight_Audit_Template.pbit in Power BI Desktop.
+- Provide your BigQuery GCP Project ID and Dataset ID when prompted.
+
+Apply the custom theme from src/json/Logistics_Freight_Audit_Theme.json if required.
