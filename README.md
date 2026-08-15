@@ -75,22 +75,28 @@ The system partitions analytics into five specialized business dashboards format
 - **Key Visuals**: KPI Cards (Duplicate Count, Duplicate USD, Claimable SLA Amount), Column Chart of Billing by Audit Flag, SLA Delay Root Cause Donut Chart, Detailed BOL Dispute Table.
 - **Dashboard Preview**:
 
-<img src="assets/images/Invoice_Integrity_SLA_Claim_Audit.png" width="80%">
+![Carrier & Route Detention Performance](<assets/images/Invoice_Integrity_SLA_Claim_Audit.png>)
 
 **2. Weight Discrepancy & Billing Audit**
 - **Business Purpose**: Benchmark carrier billed weight against WMS scale measurements to uncover over-billing.
 - **Key Visuals**: Weight Comparison KPIs (Billed vs. WMS), Top Over-billing Carriers Bar Chart, Discrepancy % by Container Type Scatter Plot, Line-item Weight Audit Table.
 - **Dashboard Preview**:
 
+![Carrier & Route Detention Performance](<assets/images/Weight Discrepancy & Billing Audit.png>)
+
 **3. Demurrage & Detention Charge Audit**
 - **Business Purpose**: Audit carrier demurrage and detention assessments against contractual free-time allowances.
 - **Key Visuals**: Storage Penalty KPIs, Actual Port Stay vs. Contractual Free Days Clustered Column Chart, Invalid Penalty Status Distribution, Storage Fee Detail Grid.
 - **Dashboard Preview**:
 
+![Carrier & Route Detention Performance](<assets/images/Demurrage & Detention Charge Audit.png>)
+
 **4. Container Weight Utilization Efficiency**
 - **Business Purpose**: Identify underutilized container capacity ($<60\%$ payload) to reduce total shipment volume requirements.
 - **Key Visuals**: Average Load Factor Gauge Chart, Utilization Breakdown by Container Type (20DC vs 40HC), Underutilized Shipment Ratio Cards, Container Payload Detail Table.
 - **Dashboard Preview**:
+
+![Carrier & Route Detention Performance](<assets/images/Container Weight Utilization Efficiency.png>)
 
 **5. Carrier & Route Detention Performance**
 - **Business Purpose**: Measure container turnaround times and total detention costs across carriers and shipping corridors (Trade Lanes).
