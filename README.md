@@ -74,6 +74,7 @@ The system partitions analytics into five specialized business dashboards format
 - **Business Purpose**: Detect duplicate invoice submissions and identify carrier-caused delivery SLA violations for claim generation.
 - **Key Visuals**: KPI Cards (Duplicate Count, Duplicate USD, Claimable SLA Amount), Column Chart of Billing by Audit Flag, SLA Delay Root Cause Donut Chart, Detailed BOL Dispute Table.
 - **Dashboard Preview**:
+  ![Carrier & Route Detention Performance](assets/images/Invoice Integrity & SLA Claim Audit.png)
 
 **2. Weight Discrepancy & Billing Audit**
 - **Business Purpose**: Benchmark carrier billed weight against WMS scale measurements to uncover over-billing.
@@ -94,6 +95,7 @@ The system partitions analytics into five specialized business dashboards format
 - **Business Purpose**: Measure container turnaround times and total detention costs across carriers and shipping corridors (Trade Lanes).
 - **Key Visuals**: Trade Lane Heatmap Matrix (POL_Origin $\times$ POD_Destination), Average Detention Days by Carrier, Total Shipment Volume Cards, Route Level Performance Breakdown.
 - **Dashboard Preview**:
+  ![Carrier & Route Detention Performance](assets/images/Carrier & Route Detention Performance.png)
 
 ### 🚀 4. IMPROVE Phase
 Based on data mart analysis, the following operational improvements are implemented:
