@@ -75,7 +75,7 @@ The system partitions analytics into five specialized business dashboards format
 - **Key Visuals**: KPI Cards (Duplicate Count, Duplicate USD, Claimable SLA Amount), Column Chart of Billing by Audit Flag, SLA Delay Root Cause Donut Chart, Detailed BOL Dispute Table.
 - **Dashboard Preview**:
 
-<img src="assets/images/Invoice_Integrity_SLA_Claim_Audit.png" width="50%">
+<img src="assets/images/Invoice_Integrity_SLA_Claim_Audit.png" width="80%">
 
 **2. Weight Discrepancy & Billing Audit**
 - **Business Purpose**: Benchmark carrier billed weight against WMS scale measurements to uncover over-billing.
