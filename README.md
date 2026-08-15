@@ -162,8 +162,8 @@ Freight_Audit_Project/
 │   ├── Executive_Summary.md            
 │   └── Business_Requirements.md   
 ├── reports/
-│   ├── Freight_Audit_Dashboard.pbix
-│   └── Freight_Audit_Template.pbit 
+│   ├── freight-audit-2-2.pbix
+│   └── freight-audit-2-2.pbit 
 ├── src/
 │   ├── dax/
 │   │   ├── dim_date_table.dax
@@ -189,24 +189,25 @@ Freight_Audit_Project/
 ```
 
 ### Installation & Deployment Steps
-1. Clone the Repository:
+**1. Clone the Repository:**
 ```bash
 git clone https://github.com/your-username/Freight_Audit_Project.git
 cd Freight_Audit_Project
 ```
 
-2. Load Raw Data to Google BigQuery:
+**2. Load Raw Data to Google BigQuery:**
 - Create dataset freight_audit_db_2 inside project freight-audit-project.
 - Upload the 4 CSV files from the data/ directory into BigQuery.
 
-3. Execute SQL Transformations:
-Run the SQL scripts in src/sql/ in the following sequence:
-- v_stg_invoices.sql
-- v_base_freight_audit.sql
-- v_mart_*.sql (all analytical data marts)
+**3. Execute SQL Transformations:**
 
-4. Launch Power BI Dashboard:
-- Open reports/Freight_Audit_Template.pbit in Power BI Desktop.
+Run the SQL scripts in `src/sql/` in the following sequence:
+- `v_stg_invoices.sql`
+- `v_base_freight_audit.sql`
+- `v_mart_*.sql` (all analytical data marts)
+
+**4. Launch Power BI Dashboard:**
+- Open `reports/freight-audit-2-2.pbit` in Power BI Desktop.
 - Provide your BigQuery GCP Project ID and Dataset ID when prompted.
 
 Apply the custom theme from src/json/Logistics_Freight_Audit_Theme.json if required.
