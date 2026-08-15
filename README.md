@@ -121,9 +121,9 @@ Based on data mart analysis, the following operational improvements are implemen
 To ensure long-term data integrity and prevent regression, control mechanisms are applied at both warehouse and BI layers.
 
 **Data Warehouse Controls (Google BigQuery)**
-- Ingestion Deduplication Logic: Uses window functions (ROW_NUMBER() OVER(PARTITION BY BOL_Number, Billed_Total_Amount)) in v_stg_invoices to flag duplicates upon ingestion.
-- Partition Filter Optimization: Explicitly handles ingestion-time partitioning filters (_PARTITIONDATE) across staging views to guarantee low-latency query performance and maintain schema stability.
+- **Ingestion Deduplication Logic**: Uses window functions (`ROW_NUMBER() OVER(PARTITION BY BOL_Number, Billed_Total_Amount`)) in `v_stg_invoices` to flag duplicates upon ingestion.
+- **Partition Filter Optimization**: Explicitly handles ingestion-time partitioning filters (_PARTITIONDATE) across staging views to guarantee low-latency query performance and maintain schema stability.
 
 **Power BI Data Model Controls**
-- Star Schema Design: All 5 data marts connect to a centralized, calculated calendar table (dim_date_table), enforcing date aggregation consistency across all visuals.
-- Isolated DAX Measures Layer: DAX measures are defined against model views rather than raw tables, enabling dynamic filtering based on user role and date context.
+- **Star Schema Design**: All 5 data marts connect to a centralized, calculated calendar table (dim_date_table), enforcing date aggregation consistency across all visuals.
+- **Isolated DAX Measures Layer**: DAX measures are defined against model views rather than raw tables, enabling dynamic filtering based on user role and date context.
