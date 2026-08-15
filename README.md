@@ -94,3 +94,25 @@ The system partitions analytics into five specialized business dashboards format
 - **Business Purpose**: Measure container turnaround times and total detention costs across carriers and shipping corridors (Trade Lanes).
 - **Key Visuals**: Trade Lane Heatmap Matrix (POL_Origin $\times$ POD_Destination), Average Detention Days by Carrier, Total Shipment Volume Cards, Route Level Performance Breakdown.
 - **Dashboard Preview**:
+
+### 🚀 4. IMPROVE Phase
+Based on data mart analysis, the following operational improvements are implemented:
+
+```plaintext
+                  ┌──────────────────────────────────────────────┐
+                  │          ACTIONABLE IMPROVEMENTS             │
+                  └──────────────────────┬───────────────────────┘
+                                         │
+         ┌───────────────────────────────┼───────────────────────────────┐
+         ▼                               ▼                               ▼
+┌─────────────────┐             ┌─────────────────┐             ┌─────────────────┐
+│ Automated Claim │             │ Contract Term   │             │ Load Factor     │
+│ Generation      │             │ Negotiations    │             │ Consolidation   │
+├─────────────────┤             ├─────────────────┤             ├─────────────────┤
+│ Export detail   │             │ Leverage carrier│             │ Consolidate LCL │
+│ dispute logs    │             │ scorecards using│             │ shipments on    │
+│ directly into   │             │ detention & SLA │             │ routes with     │
+│ Carrier Claim   │             │ data to extend  │             │ load factors    │
+│ templates.      │             │ Free Time.      │             │ under 60%.      │
+└─────────────────┘             └─────────────────┘             └─────────────────┘
+```
