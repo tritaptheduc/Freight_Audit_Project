@@ -1,0 +1,240 @@
+{
+    "name": "Logistics Freight Audit Transparent Theme v3",
+    "dataColors": [
+        "#1B365D",
+        "#008080",
+        "#D9381E",
+        "#E67E22",
+        "#2E7D32",
+        "#5D6D7E",
+        "#2980B9",
+        "#8E44AD"
+    ],
+    "background": "#F8F9FA",
+    "foreground": "#1B365D",
+    "tableAccent": "#1B365D",
+    "visualStyles": {
+        "*": {
+            "*": {
+                "fontFamily": [
+                    {
+                        "value": "Segoe UI"
+                    }
+                ],
+                "fontSize": [
+                    {
+                        "value": 10
+                    }
+                ],
+                "color": [
+                    {
+                        "solid": {
+                            "color": "#2C3E50"
+                        }
+                    }
+                ],
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ],
+                "border": [
+                    {
+                        "show": false
+                    }
+                ]
+            }
+        },
+        "page": {
+            "*": {
+                "background": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#F4F6F9"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ]
+            }
+        },
+        "slicer": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ],
+                "items": [
+                    {
+                        "fontColor": {
+                            "solid": {
+                                "color": "#2C3E50"
+                            }
+                        },
+                        "background": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "card": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ]
+            }
+        },
+        "textbox": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ]
+            }
+        },
+        "actionButton": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ]
+            }
+        },
+        "pageNavigator": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ]
+            }
+        },
+        "tableEx": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ],
+                "columnHeaders": [
+                    {
+                        "fontColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "backColor": {
+                            "solid": {
+                                "color": "#1B365D"
+                            }
+                        },
+                        "fontFamily": "Segoe UI",
+                        "fontSize": 10,
+                        "bold": true,
+                        "alignment": "Center"
+                    }
+                ],
+                "rows": [
+                    {
+                        "fontColor": {
+                            "solid": {
+                                "color": "#2C3E50"
+                            }
+                        },
+                        "backColorPrimary": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "backColorSecondary": {
+                            "solid": {
+                                "color": "#F8FAFC"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pivotTable": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ],
+                "columnHeaders": [
+                    {
+                        "fontColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "backColor": {
+                            "solid": {
+                                "color": "#1B365D"
+                            }
+                        },
+                        "bold": true
+                    }
+                ]
+            }
+        }
+    }
+}
