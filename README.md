@@ -196,8 +196,8 @@ cd Freight_Audit_Project
 ```
 
 **2. Load Raw Data to Google BigQuery:**
-- Create dataset freight_audit_db_2 inside project freight-audit-project.
-- Upload the 4 CSV files from the data/ directory into BigQuery.
+- Create dataset `freight_audit_db_2` inside project `freight-audit-project`.
+- Upload the 4 CSV files from the `data/` directory into BigQuery.
 
 **3. Execute SQL Transformations:**
 
